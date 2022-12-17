@@ -1,0 +1,15 @@
+{% extends 'mainbase.html' %}
+{% block title %}Department{% endblock %}
+{% block content %}
+{% for c in course %}
+    <div class="card text-center mx-3 my-3 ml-5" style="width: 80vh; display:inline-block">
+        
+        <div class="card-body">
+            <h5 class="card-title" style="color:rgb(9, 9, 56);"> {{c.name}}</h5>
+            <p class="card-text">{{c.description}}</p>
+            <div class="d-flex"><h6>Duration:</h6><p>{{c.duration}}Years</p></div>
+            <div class="d-flex"><h6>Fee:</h6><p>{{c.fee}}/-</p></div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
